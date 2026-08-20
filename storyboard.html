@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MODEKA — Equipación premium desde 1946</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#07070a;--ink:#f4f2ee;--mut:#9a978f;--line:#20202a;--red:#e11d2a}
+  *{box-sizing:border-box;margin:0}
+  body{background:var(--bg);color:var(--ink);font-family:Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden;line-height:1.55}
+  .anton{font-family:Anton,sans-serif;text-transform:uppercase;letter-spacing:.01em;font-weight:400;line-height:.98}
+  a{color:inherit;text-decoration:none}
+  h2 em,h1 em{font-style:normal;color:var(--red)}
+  .grain{position:fixed;inset:0;z-index:80;pointer-events:none;opacity:.05;mix-blend-mode:overlay;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>")}
+  .bar{position:fixed;top:0;left:0;right:0;z-index:70;display:flex;justify-content:space-between;align-items:center;padding:15px 5vw;background:linear-gradient(180deg,rgba(7,7,10,.9),transparent);mix-blend-mode:difference}
+  .bar b{font-family:Anton;font-size:20px;letter-spacing:.02em}.bar b span{color:var(--red)}
+  .bar .t{font-size:11px;letter-spacing:.22em;text-transform:uppercase}
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s cubic-bezier(.16,1,.3,1)}
+  .reveal.in{opacity:1;transform:none}
+  section{padding:clamp(64px,10vw,140px) 5vw;position:relative}
+  .k{font-size:12px;letter-spacing:.28em;text-transform:uppercase;font-weight:700;color:var(--red)}
+  .center{text-align:center;max-width:840px;margin:0 auto}
+  .center h2{font-size:clamp(30px,5.2vw,72px)}.center p{color:var(--mut);margin-top:16px;font-size:16px}
+  /* HERO */
+  .hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;overflow:hidden}
+  .hero__bg{position:absolute;inset:0;z-index:0}
+  .hero__bg img{width:100%;height:100%;object-fit:cover;opacity:.5;animation:kb 20s ease-in-out infinite alternate}
+  .hero__bg::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,var(--bg),rgba(7,7,10,.25) 52%,rgba(7,7,10,.7))}
+  @keyframes kb{from{transform:scale(1.04)}to{transform:scale(1.15)}}
+  .hero__in{position:relative;z-index:1;max-width:1180px}
+  .hero h1{font-size:clamp(58px,15vw,220px);margin:.06em 0}
+  .hero .sub{font-size:clamp(15px,1.9vw,22px);color:#dcd8cf;max-width:620px;margin-top:10px}
+  .hero .yr{font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--red);font-weight:700}
+  /* PRODUCTO */
+  .prod{max-width:1240px;margin:0 auto;padding:clamp(40px,6vw,84px) 0;border-top:1px solid var(--line)}
+  .phead{display:flex;flex-wrap:wrap;align-items:baseline;gap:14px}
+  .pnum{font-family:Anton;font-size:clamp(38px,6vw,72px);color:#2b2b34;line-height:.8}
+  .phead h3{font-size:clamp(24px,3.4vw,46px);font-family:Anton;text-transform:uppercase}
+  .fam{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--mut);border:1px solid var(--line);padding:4px 10px;border-radius:999px}
+  .sell{color:var(--ink);font-family:Anton;text-transform:uppercase;font-size:clamp(18px,2.4vw,30px);margin:6px 0 14px}
+  .sell em{color:var(--red);font-style:normal}
+  .tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+  .tag{font-size:12px;color:#cbc7bd;border:1px solid var(--line);background:#0d0d12;border-radius:8px;padding:6px 11px}
+  .tag b{color:var(--red);font-weight:700;letter-spacing:.06em;text-transform:uppercase;font-size:10px;margin-right:6px}
+  .film{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  @media(max-width:820px){.film{grid-template-columns:1fr}}
+  .fr{position:relative;border:1px solid var(--line);border-radius:14px;overflow:hidden;aspect-ratio:4/5;background:#0c0c11}
+  .fr img{width:100%;height:100%;object-fit:cover;display:block;animation:kb 13s ease-in-out infinite alternate}
+  .fr:nth-child(2) img{animation-duration:15s}.fr:nth-child(3) img{animation-duration:11s}
+  .cap{position:absolute;left:10px;right:10px;bottom:10px;font-size:12.5px;color:#e7e3da;background:linear-gradient(0deg,rgba(7,7,10,.82),transparent);padding:22px 6px 6px}
+  .fx{position:absolute;top:10px;right:10px;font-family:Anton;font-size:13px;letter-spacing:.08em;color:#fff;background:var(--red);padding:6px 11px;border-radius:6px;animation:fxp 1.9s ease-in-out infinite}
+  @keyframes fxp{0%,100%{box-shadow:0 8px 22px -10px rgba(225,29,42,.2)}50%{box-shadow:0 8px 30px -6px rgba(225,29,42,.8)}}
+  /* FX grid */
+  .fxgrid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;max-width:1240px;margin:34px auto 0}
+  @media(max-width:900px){.fxgrid{grid-template-columns:repeat(2,1fr)}}
+  .fxc{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#0c0c11}
+  .fxc .im{position:relative;aspect-ratio:4/5}.fxc img,.fxc video{width:100%;height:100%;object-fit:cover;display:block}
+  .fxc .lab{position:absolute;left:9px;bottom:9px;font-family:Anton;font-size:12px;color:#fff;background:var(--red);padding:5px 9px;border-radius:5px}
+  .fxc p{font-size:12.5px;color:var(--mut);padding:12px 13px 15px;line-height:1.5}
+  /* 4 mundos */
+  .worlds{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;max-width:1240px;margin:34px auto 0}
+  @media(max-width:820px){.worlds{grid-template-columns:1fr 1fr}}
+  .wc{position:relative;aspect-ratio:3/4;border-radius:14px;overflow:hidden;border:1px solid var(--line)}
+  .wc img{width:100%;height:100%;object-fit:cover;transition:transform .7s cubic-bezier(.16,1,.3,1)}
+  .wc:hover img{transform:scale(1.08)}
+  .wc__o{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:18px;background:linear-gradient(0deg,rgba(6,6,7,.9),transparent 55%)}
+  .wc__o span{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--red);font-weight:700}
+  .wc__o h4{font-family:Anton;text-transform:uppercase;font-size:20px;margin-top:5px}
+  /* cierre */
+  .end{text-align:center;background:radial-gradient(900px 520px at 50% 0,#15151b,var(--bg))}
+  .end h2{font-size:clamp(40px,8vw,120px)}
+  .btn{display:inline-block;margin-top:26px;background:var(--red);color:#fff;font-weight:700;padding:16px 36px;border-radius:999px;letter-spacing:.02em;text-transform:uppercase;font-size:13px}
+  footer{border-top:1px solid var(--line);padding:28px 5vw;color:#5c5c66;font-size:11.5px;line-height:1.6;text-align:center}
+</style>
+</head>
+<body>
+<div class="grain"></div>
+<div class="bar"><b>MODEKA<span>.</span></b><span class="t">Premium · desde 1946</span></div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero__bg"><img src="storyboard/5a.png" alt=""></div>
+  <div class="hero__in">
+    <span class="yr">Desarrollada en Alemania · hecha para rutas de verdad</span>
+    <h1 class="anton">MODEKA<span style="color:var(--red)">.</span></h1>
+    <p class="sub">Equipación de moto premium desde 1946. Tu terreno lo decides tú; nosotros ponemos la que aguanta a tu lado, kilómetro tras kilómetro.</p>
+  </div>
+</section>
+
+<!-- LOS ICONOS -->
+<section>
+  <div class="center reveal"><span class="k">Los iconos</span><h2 class="anton">Cada prenda, en su <em>terreno</em></h2>
+    <p>La que eliges una y otra vez. Nacida para una forma de rodar, con el oficio de Modeka dentro. Con su piloto, su clima, su momento.</p></div>
+  <div id="prods"></div>
+</section>
+
+<!-- TECNOLOGIA QUE SE VE -->
+<section>
+  <div class="center reveal"><span class="k">Tecnología que se ve</span><h2 class="anton">No lo contamos. Lo <em>enseñamos</em></h2>
+    <p>Impermeable, ventilada, protegida, reflectante, de cuero de verdad. Lo que en una ficha es una línea, en tu ruta es la diferencia.</p></div>
+  <div class="fxgrid reveal" id="fxgrid"></div>
+</section>
+
+<!-- 4 MUNDOS -->
+<section>
+  <div class="center reveal"><span class="k">Cuatro mundos · un mismo oficio</span><h2 class="anton">Listos para <em>cualquier terreno</em></h2>
+    <p>Touring, Adventure, Urban y Sport. Cada mundo con su carácter; todos, la misma ingeniería alemana.</p></div>
+  <div class="worlds reveal">
+    <div class="wc"><img src="modeka/line-touring.jpg" alt="Touring"><div class="wc__o"><span>Touring</span><h4>La libertad<br>infinita</h4></div></div>
+    <div class="wc"><img src="modeka/line-adventure.jpg" alt="Adventure"><div class="wc__o"><span>Adventure</span><h4>Cualquier<br>terreno</h4></div></div>
+    <div class="wc"><img src="modeka/line-urban.jpg" alt="Urban"><div class="wc__o"><span>Urban</span><h4>El día a día<br>sobre 2 ruedas</h4></div></div>
+    <div class="wc"><img src="modeka/line-sport.jpg" alt="Sport"><div class="wc__o"><span>Sport</span><h4>La caza de<br>la velocidad</h4></div></div>
+  </div>
+</section>
+
+<!-- CIERRE -->
+<section class="end reveal">
+  <span class="k">80 años rodando</span>
+  <h2 class="anton">Elige tu mundo.<br>Elige <em>Modeka</em>.</h2>
+  <p style="color:var(--mut);max-width:520px;margin:16px auto 0">La seguridad no debería ser cara. Protección certificada, materiales que aguantan y el temple de quien lleva desde 1946 haciendo equipación para rutas de verdad.</p>
+  <a class="btn" href="#">Descubre la colección</a>
+</section>
+
+<footer>Muestra creativa · Boomatik para Modeka. Imágenes hiperrealistas a partir de las fotos reales de catálogo; las prendas se reproducen sin alterar su diseño. Motos y fondos ilustrativos. El movimiento y los FX se producen en vídeo sobre estos fotogramas.</footer>
+
+<script>
+const PRODS=[
+ {num:"1",n:"Panamericana II",fam:"Adventure",sell:"La que <em>cruza continentes</em>.",
+  terreno:"Pista y asfalto en un mismo viaje",perfil:"Para quien sale semanas, no horas",momento:"Cruzar un puerto al amanecer",
+  fx:2,fxlab:"IMPERMEABLE",caps:["En su terreno","En movimiento","El agua no entra"]},
+ {num:"2",n:"Paneo LT",fam:"Touring",sell:"Ligera. Laminada. <em>Respira contigo</em>.",
+  terreno:"Puertos alpinos y día a día",perfil:"Para el que no quiere cargar peso",momento:"La escapada de verano",
+  fx:2,fxlab:"VENTILACIÓN",caps:["En los Alpes","En giro","El aire pasa"]},
+ {num:"3",n:"Leather Icons",fam:"Urban · Clásico",sell:"El estilo que <em>nunca pasa</em>.",
+  terreno:"Ciudad y carreteras con curvas",perfil:"Para el que rueda por placer",momento:"Café y mañana de domingo",
+  fx:2,fxlab:"CUERO PREMIUM",caps:["Café racer","El grano del cuero","Oficio desde 1946"]},
+ {num:"4",n:"Panamericana II Lady",fam:"Adventure · mujer",sell:"Mismo temple. <em>Patrón propio</em>.",
+  terreno:"Todoterreno, corte de mujer",perfil:"Para la piloto que no se conforma",momento:"Salir del asfalto",
+  fx:1,fxlab:"PROTECCIÓN CE",caps:["Campo dorado","Protección CE","La mirada"]},
+ {num:"5",n:"Atlaz",fam:"Adventure · 4 estaciones",sell:"Del sol al chubasco, <em>sin parar</em>.",
+  terreno:"Alta montaña, cualquier clima",perfil:"Para el de las cuatro estaciones",momento:"Que anochezca y siga lloviendo",
+  fx:2,fxlab:"REFLECTANTE",caps:["Sobre las nubes","El ribete brilla","De noche te ven"]},
+];
+const FX=[
+ {id:"1c",vid:"videos/fx-impermeable.mp4",lab:"IMPERMEABLE",why:"La membrana repele el agua. Tú, seco."},
+ {id:"2c",vid:"videos/fx-ventilacion.mp4",lab:"VENTILACIÓN",why:"Malla técnica: el aire pasa, el calor no se queda."},
+ {id:"4b",vid:"videos/fx-proteccion.mp4",lab:"PROTECCIÓN CE",why:"Protecciones homologadas justo donde importan."},
+ {id:"3c",vid:"videos/fx-cuero.mp4",lab:"CUERO PREMIUM",why:"Cuero de verdad, curtido para durar. Desde 1946."},
+ {id:"5c",vid:"videos/fx-reflectante.mp4",lab:"REFLECTANTE",why:"Cuando cae la luz, tú sigues visible."},
+];
+const B=["","",""];
+document.getElementById("prods").innerHTML=PRODS.map(p=>`
+  <div class="prod reveal">
+    <div class="phead"><span class="pnum">${p.num}</span><h3>${p.n}</h3><span class="fam">${p.fam}</span></div>
+    <div class="sell">${p.sell}</div>
+    <div class="tags">
+      <span class="tag"><b>Terreno</b>${p.terreno}</span>
+      <span class="tag"><b>Piloto</b>${p.perfil}</span>
+      <span class="tag"><b>Momento</b>${p.momento}</span>
+    </div>
+    <div class="film">
+      ${[0,1,2].map(i=>{const id=p.num+["a","b","c"][i];return `
+        <div class="fr">
+          <img src="storyboard/${id}.png" alt="${p.n}">
+          ${i===p.fx?`<span class="fx">${p.fxlab}</span>`:""}
+          <span class="cap">${p.caps[i]}</span>
+        </div>`}).join("")}
+    </div>
+  </div>`).join("");
+document.getElementById("fxgrid").innerHTML=FX.map(f=>`
+  <div class="fxc"><div class="im"><video src="${f.vid}" muted autoplay loop playsinline poster="storyboard/${f.id}.png"></video><span class="lab">${f.lab}</span></div><p>${f.why}</p></div>`).join("");
+const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target);}}),{threshold:.12});
+document.querySelectorAll(".reveal").forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

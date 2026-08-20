@@ -1,0 +1,4 @@
+.eleven_key
+*.py
+*.ps1
+__pycache__/
