@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="es">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>MODEKA — Biblia de anuncios cinematográficos (preproducción)</title>
+<title>MODEKA — Cinematic ad bible (preproduction)</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -83,140 +83,153 @@
 </style>
 </head>
 <body>
-<nav class="xnav"><a href="index.html" class="xnav__h">MODEKA<span>.</span></a><a href="modeka-final.html">Presentación</a><a href="ad-bible.html">Anuncios</a><a href="storyboard.html">Book</a></nav>
-<style>.xnav{position:fixed;top:12px;right:12px;z-index:200;display:flex;gap:4px;align-items:center;background:rgba(10,10,14,.82);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid #24242c;border-radius:999px;padding:6px 8px}.xnav a{color:#cfcfd6;font-size:11px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;text-decoration:none;padding:6px 11px;border-radius:999px;transition:.2s;white-space:nowrap;font-family:'Inter',system-ui,sans-serif}.xnav a:hover{color:#fff;background:rgba(255,255,255,.08)}.xnav__h{font-family:'Anton',sans-serif!important;color:#fff!important;font-size:14px!important}.xnav__h span{color:#e11d2a}@media(max-width:560px){.xnav{top:8px;right:8px;padding:4px 5px}.xnav a{font-size:10px;padding:5px 7px}}</style>
+<script>
+/* ===== i18n core (EN default · DE toggle) ===== */
+window.LANG='en';window.__i18n=[];
+function applyLang(){var L=window.LANG;
+ document.querySelectorAll('[data-de]').forEach(function(el){if(el.dataset.en===undefined)el.dataset.en=el.innerHTML;el.innerHTML=(L==='de')?el.getAttribute('data-de'):el.dataset.en;});
+ window.__i18n.forEach(function(fn){try{fn(L);}catch(e){}});}
+function setLang(l){window.LANG=l;document.documentElement.lang=l;document.querySelectorAll('.langtog b').forEach(function(b){b.classList.toggle('on',b.getAttribute('data-l')===l);});applyLang();}
+</script>
+<div class="langtog" id="langtog"><b data-l="en" class="on" onclick="setLang('en')">EN</b><b data-l="de" onclick="setLang('de')">DE</b></div>
+<nav class="xnav"><a href="index.html" class="xnav__h">MODEKA<span>.</span></a><a href="modeka-final.html" data-de="Präsentation">Presentation</a><a href="ad-bible.html" data-de="Anzeigen">Ads</a><a href="storyboard.html" data-de="Buch">Book</a></nav>
+<style>.xnav{position:fixed;top:12px;right:12px;z-index:200;display:flex;gap:4px;align-items:center;background:rgba(10,10,14,.82);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid #24242c;border-radius:999px;padding:6px 8px}.xnav a{color:#cfcfd6;font-size:11px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;text-decoration:none;padding:6px 11px;border-radius:999px;transition:.2s;white-space:nowrap;font-family:'Inter',system-ui,sans-serif}.xnav a:hover{color:#fff;background:rgba(255,255,255,.08)}.xnav__h{font-family:'Anton',sans-serif!important;color:#fff!important;font-size:14px!important}.xnav__h span{color:#e11d2a}@media(max-width:560px){.xnav{top:8px;right:8px;padding:4px 5px}.xnav a{font-size:10px;padding:5px 7px}}
+.langtog{position:fixed;top:12px;left:12px;z-index:200;display:flex;gap:2px;background:rgba(10,10,14,.82);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid #24242c;border-radius:999px;padding:5px}.langtog b{font-size:11px;font-weight:700;color:#8a8a92;padding:6px 12px;border-radius:999px;cursor:pointer;font-family:'Inter',system-ui,sans-serif}.langtog b.on{background:var(--red);color:#fff}@media(max-width:560px){.langtog{top:8px;left:8px;padding:3px}.langtog b{padding:5px 9px}}</style>
 <div class="grain"></div>
-<div class="bar"><b>MODEKA<span>.</span> · Anuncios</b><span>Preproducción · 5 planos/anuncio · storyboard con imagen</span></div>
+<div class="bar"><b data-de="MODEKA. · Anzeigen">MODEKA<span>.</span> · Ads</b><span data-de="Vorproduktion · 5 Shots/Spot · Storyboard mit Bild">Preproduction · 5 shots/ad · storyboard with imagery</span></div>
 
 <section class="hero">
   <div class="hero__bg"><img src="ads/1-1.png" alt=""></div>
   <div class="hero__in">
-    <span class="k">Biblia de anuncios cinematográficos</span>
-    <h1 class="anton">Cinco anuncios,<br>cinco <em>historias</em></h1>
-    <p>Cada prenda, un anuncio de cine con su propio arco: apertura y cierre distintos, ángulos y lentes variados, guion hablado y voz de anuncio elegante. Storyboard completo, un fotograma por plano.</p>
+    <span class="k" data-de="Kinematografische Werbe-Bibel">Cinematic ad bible</span>
+    <h1 class="anton" data-de="Fünf Spots,<br>fünf <em>Geschichten</em>">Five ads,<br>five <em>stories</em></h1>
+    <p data-de="Jedes Kleidungsstück, ein Kino-Spot mit eigenem Bogen: eigener Anfang und Schluss, wechselnde Winkel und Objektive, gesprochenes Skript und elegante Werbestimme. Komplettes Storyboard, ein Frame pro Einstellung.">Each garment, a cinematic ad with its own arc: distinct opening and close, varied angles and lenses, a spoken script and an elegant ad voice. Full storyboard, one frame per shot.</p>
   </div>
 </section>
 
 <section>
-  <div class="center"><span class="k">El arco</span><h2 class="anton">Cinco planos, una <em>historia</em></h2></div>
+  <div class="center"><span class="k" data-de="Der Bogen">The arc</span><h2 class="anton" data-de="Fünf Einstellungen, eine <em>Geschichte</em>">Five shots, one <em>story</em></h2></div>
   <div class="fw">
-    <div><span class="n">0–3 s</span><div class="t">Gancho</div><div class="s">Plano imponente que para el scroll.</div></div>
-    <div><span class="n">3–7 s</span><div class="t">Acción</div><div class="s">El producto en movimiento, en su terreno.</div></div>
-    <div><span class="n">7–11 s</span><div class="t">Prueba</div><div class="s">El FX que demuestra el valor.</div></div>
-    <div><span class="n">11–15 s</span><div class="t">Giro</div><div class="s">El momento que solo tiene este anuncio.</div></div>
-    <div><span class="n">15–18 s</span><div class="t">Cierre</div><div class="s">Escena NUEVA + logo. Nunca repite el gancho.</div></div>
+    <div><span class="n">0–3 s</span><div class="t" data-de="Hook">Hook</div><div class="s" data-de="Ein starker Shot, der das Scrollen stoppt.">A striking shot that stops the scroll.</div></div>
+    <div><span class="n">3–7 s</span><div class="t" data-de="Action">Action</div><div class="s" data-de="Das Produkt in Bewegung, in seinem Terrain.">The product in motion, in its terrain.</div></div>
+    <div><span class="n">7–11 s</span><div class="t" data-de="Beweis">Proof</div><div class="s" data-de="Der FX, der den Wert beweist.">The FX that proves the value.</div></div>
+    <div><span class="n">11–15 s</span><div class="t" data-de="Wendung">Twist</div><div class="s" data-de="Der Moment, den nur dieser Spot hat.">The moment only this ad has.</div></div>
+    <div><span class="n">15–18 s</span><div class="t" data-de="Abschluss">Close</div><div class="s" data-de="NEUE Szene + Logo. Wiederholt nie den Hook.">NEW scene + logo. Never repeats the hook.</div></div>
   </div>
 </section>
 
 <section>
-  <div class="center"><span class="k">Casting de voz</span><h2 class="anton">Dos voces, tono <em>premium</em></h2></div>
+  <div class="center"><span class="k" data-de="Stimmen-Casting">Voice casting</span><h2 class="anton" data-de="Zwei Stimmen, <em>Premium</em>-Ton">Two voices, <em>premium</em> tone</h2></div>
   <div class="cast">
-    <div class="vc m"><span class="seg">Voz chico</span><h3>Masculina · grave y serena</h3>
+    <div class="vc m"><span class="seg" data-de="Männerstimme">Male voice</span><h3 data-de="Männlich · tief und ruhig">Male · deep and calm</h3>
       <div class="wave"><i style="animation-delay:0s"></i><i style="animation-delay:.1s"></i><i style="animation-delay:.2s"></i><i style="animation-delay:.15s"></i><i style="animation-delay:.05s"></i><i style="animation-delay:.25s"></i><i style="animation-delay:.12s"></i><i style="animation-delay:.3s"></i></div>
-      <p>Narrador de anuncio de automoción premium. Español de España, pausado, cierre con autoridad. Variantes: Leather más profunda/sexy, Atlaz más cálida y cercana.</p>
-      <div class="chips"><span class="chip"><b>Motor</b>ElevenLabs v3</span><span class="chip"><b>Estab.</b>alta</span><span class="chip"><b>Ritmo</b>90–100 ppm</span></div></div>
-    <div class="vc f"><span class="seg">Voz chica</span><h3>Femenina · cálida y refinada</h3>
+      <p data-de="Sprecher für Premium-Automobilwerbung. Ruhig, mit autoritärem Schluss. Varianten: Leather tiefer/sexier, Atlaz wärmer und nahbarer.">Premium automotive ad narrator. Measured, closing with authority. Variants: Leather deeper/sexier, Atlaz warmer and closer.</p>
+      <div class="chips"><span class="chip"><b data-de="Engine">Engine</b>ElevenLabs v3</span><span class="chip"><b data-de="Stab.">Stab.</b><span data-de="hoch">high</span></span><span class="chip"><b data-de="Tempo">Pace</b>90–100 wpm</span></div></div>
+    <div class="vc f"><span class="seg" data-de="Frauenstimme">Female voice</span><h3 data-de="Weiblich · warm und raffiniert">Female · warm and refined</h3>
       <div class="wave"><i style="animation-delay:.2s"></i><i style="animation-delay:.05s"></i><i style="animation-delay:.28s"></i><i style="animation-delay:.12s"></i><i style="animation-delay:.22s"></i><i style="animation-delay:.08s"></i><i style="animation-delay:.3s"></i><i style="animation-delay:.15s"></i></div>
-      <p>Voz editorial de moda / perfume. Español de España, elegante. Variantes: Paneo luminosa, Lady segura y poderosa.</p>
-      <div class="chips"><span class="chip"><b>Motor</b>ElevenLabs v3</span><span class="chip"><b>Estilo</b>editorial</span><span class="chip"><b>Ritmo</b>85–95 ppm</span></div></div>
+      <p data-de="Editorial-Stimme für Mode / Parfüm. Elegant. Varianten: Paneo strahlend, Lady selbstbewusst und kraftvoll.">Fashion / perfume editorial voice. Elegant. Variants: Paneo luminous, Lady confident and powerful.</p>
+      <div class="chips"><span class="chip"><b data-de="Engine">Engine</b>ElevenLabs v3</span><span class="chip"><b data-de="Stil">Style</b><span data-de="editorial">editorial</span></span><span class="chip"><b data-de="Tempo">Pace</b>85–95 wpm</span></div></div>
   </div>
-  <div class="note" style="text-align:center"><b>Voz + música REAL por anuncio</b> — generadas con <b>OpenArt (Gemini Omni Flash)</b>: voz de actor en inglés, música de acción propia y SFX, en una sola pasada. Escúchalas en el reproductor bajo cada anuncio.</div>
-  <div class="note"><b>Cada anuncio, su voz única y su música de acción:</b> Panamericana (masculina grave · orquestal épica) · Paneo (femenina cálida · electrónica veloz) · Leather (masculina profunda · blues-rock + motor) · Lady (femenina potente · percusión) · Atlaz (masculina cercana · cinemática lluvia→cima). Versión final: se extienden a 18 s y se mezclan en máster.</div>
+  <div class="note" style="text-align:center" data-de="<b>ECHTE Stimme + Musik pro Spot</b> — erzeugt mit <b>OpenArt (Gemini Omni Flash)</b>: Schauspielerstimme auf Englisch, eigene Action-Musik und SFX, in einem Durchgang. Hörproben im Player unter jedem Spot."><b>REAL voice + music per ad</b> — generated with <b>OpenArt (Gemini Omni Flash)</b>: an actor voice in English, its own action music and SFX, in a single pass. Listen in the player under each ad.</div>
+  <div class="note" data-de="<b>Jeder Spot, eigene Stimme und Action-Musik:</b> Panamericana (tiefe Männerstimme · episch orchestral) · Paneo (warme Frauenstimme · schnelle Elektronik) · Leather (tiefe Männerstimme · Blues-Rock + Motor) · Lady (kraftvolle Frauenstimme · Percussion) · Atlaz (nahbare Männerstimme · filmisch Regen→Gipfel). Endversion: auf 18 s erweitert und im Master gemischt."><b>Each ad, its own voice and action music:</b> Panamericana (deep male · epic orchestral) · Paneo (warm female · fast electronic) · Leather (deep male · blues-rock + engine) · Lady (powerful female · percussion) · Atlaz (close male · cinematic rain→summit). Final version: extended to 18 s and mixed in the master.</div>
 </section>
 
 <section>
-  <div class="center"><span class="k">Los anuncios</span><h2 class="anton">Cinco piezas, <em>cada una distinta</em></h2></div>
+  <div class="center"><span class="k" data-de="Die Spots">The ads</span><h2 class="anton" data-de="Fünf Stücke, <em>jedes anders</em>">Five pieces, <em>each one different</em></h2></div>
   <div id="ads"></div>
 </section>
 
 <section class="prod">
-  <div class="center"><span class="k">Producción</span><h2 class="anton">Cómo se <em>fabrica</em></h2></div>
+  <div class="center"><span class="k" data-de="Produktion">Production</span><h2 class="anton" data-de="Wie es <em>gemacht</em> wird">How it's <em>made</em></h2></div>
   <div class="grid">
-    <div class="pc"><div class="t">Storyboard</div><p>Los 25 fotogramas de esta biblia son bocetos generados (Nano Banana 2). Validan encuadre, luz y acción antes del vídeo.</p></div>
-    <div class="pc"><div class="t">Motor vídeo</div><p>Seedance 2.0 para planos con rostro; Kling 3 Omni para B-roll y macro. Start/end frame por plano.</p></div>
-    <div class="pc"><div class="t">Voz + sonido</div><p>VO ElevenLabs v3 + diseño de sonido (motor, lluvia, cuero) y música por anuncio. Mezcla en el máster.</p></div>
-    <div class="pc"><div class="t">Formatos</div><p>9:16 redes + 16:9 TV. Duración 18 s. Mismo material, dos recortes.</p></div>
+    <div class="pc"><div class="t" data-de="Storyboard">Storyboard</div><p data-de="Die 25 Frames dieser Bibel sind generierte Skizzen (Nano Banana 2). Sie prüfen Bildausschnitt, Licht und Action vor dem Video.">The 25 frames in this bible are generated sketches (Nano Banana 2). They validate framing, light and action before video.</p></div>
+    <div class="pc"><div class="t" data-de="Video-Engine">Video engine</div><p data-de="Seedance 2.0 für Gesichts-Shots; Kling 3 Omni für B-Roll und Makro. Start-/End-Frame pro Einstellung.">Seedance 2.0 for face shots; Kling 3 Omni for B-roll and macro. Start/end frame per shot.</p></div>
+    <div class="pc"><div class="t" data-de="Stimme + Sound">Voice + sound</div><p data-de="VO ElevenLabs v3 + Sounddesign (Motor, Regen, Leder) und Musik pro Spot. Im Master gemischt.">VO ElevenLabs v3 + sound design (engine, rain, leather) and music per ad. Mixed in the master.</p></div>
+    <div class="pc"><div class="t" data-de="Formate">Formats</div><p data-de="9:16 Social + 16:9 TV. 18 s Länge. Gleiches Material, zwei Zuschnitte.">9:16 social + 16:9 TV. 18 s duration. Same material, two crops.</p></div>
   </div>
-  <div class="note"><b>Continuidad (regla dura):</b> misma cara, mismo peinado y misma ropa en TODOS los planos de un anuncio — el pelo no salta de recogido a suelto entre escenas. Cada plano parte del mismo fotograma-referencia del modelo. Micro-expresiones y mirada a cámara, reservadas al cierre. <b>Ningún anuncio empieza y acaba en la misma escena.</b></div>
+  <div class="note" data-de="<b>Continuity (harte Regel):</b> dasselbe Gesicht, dieselbe Frisur und dieselbe Kleidung in ALLEN Einstellungen eines Spots — die Haare springen zwischen Szenen nie von hochgesteckt zu offen. Jede Einstellung startet vom selben Modell-Referenzframe. Mikro-Expressionen und Blick in die Kamera sind dem Abschluss vorbehalten. <b>Kein Spot beginnt und endet in derselben Szene.</b>"><b>Continuity (hard rule):</b> same face, same hairstyle and same clothing in ALL shots of an ad — hair never jumps from tied-up to loose between scenes. Every shot starts from the same model reference frame. Micro-expressions and eye contact are reserved for the close. <b>No ad starts and ends in the same scene.</b></div>
 </section>
 
-<footer>Preproducción creativa · Boomatik para Modeka. Storyboard y prompts previos a la generación de vídeo. Prendas reproducidas sin alterar el diseño; motos y fondos ilustrativos.</footer>
+<footer data-de="Kreative Vorproduktion · Boomatik für Modeka. Storyboard und Prompts vor der Videogenerierung. Kleidungsstücke ohne Designänderung wiedergegeben; Motorräder und Hintergründe illustrativ.">Creative preproduction · Boomatik for Modeka. Storyboard and prompts prior to video generation. Garments reproduced without altering the design; motorcycles and backgrounds illustrative.</footer>
 
 <script>
-const V={m:{cls:"m",seg:"Chico"},f:{cls:"f",seg:"Chica"}};
+const V={m:{cls:"m",seg:{en:"Man",de:"Mann"}},f:{cls:"f",seg:{en:"Woman",de:"Frau"}}};
 const TC=["0–3s","3–7s","7–11s","11–15s","15–18s"];
 const ADS=[
- {num:"1",prod:"Panamericana II",fam:"Adventure",seg:"m",voz:"Grave, serena",vozsrc:"audio/vo-1.mp3",tag:"Your terrain, your rules.",
-  idea:"Una prenda, todos los terrenos: del desierto seco al río de montaña en un mismo día. Épico, paisajista.",
+ {num:"1",prod:"Panamericana II",fam:{en:"Adventure",de:"Adventure"},seg:"m",voz:{en:"Deep, calm",de:"Tief, ruhig"},vozsrc:"audio/vo-1.mp3",tag:"Your terrain, your rules.",
+  idea:{en:"One garment, every terrain: from dry desert to mountain river in a single day. Epic, landscape-driven.",de:"Ein Kleidungsstück, jedes Terrain: von der trockenen Wüste zum Bergfluss an einem Tag. Episch, landschaftlich."},
   vo:"Some roads aren't on any map. From dry desert to mountain river, in a single day. The Panamericana Two takes it all: waterproof membrane, top-level protection. Nothing stops you. Modeka. Your terrain, your rules.",
-  mus:"Cinemático épico, cuerdas y percusión sutil en crescendo.",
+  mus:{en:"Epic cinematic, strings and subtle percussion in crescendo.",de:"Episch filmisch, Streicher und dezente Percussion im Crescendo."},
   shots:[
-   {beat:"Gancho",cam:"21mm anamórfico · grúa ascendente, amanecer",vo:"Some roads aren't on any map.",pr:"Wide 21mm anamorphic, low crane rising from cracked desert floor at dawn to reveal a lone rider on a rally bike, silhouette against a burning orange sky, backlit dust, Kodak Vision3 500T grade, epic."},
-   {beat:"Acción",cam:"Cenital dron · descenso a velocidad",vo:"From dry desert…",pr:"Aerial top-down drone descending, the rider carving a dust trail across an empty ochre plateau at speed, hard midday sun, high contrast, tiny figure in vast land."},
-   {beat:"Prueba",cam:"50mm · cámara lenta, cruce de río",vo:"…to mountain river, in a single day.",pr:"Eye-level 50mm slow-mo, front wheel hits a shallow river crossing, water sheeting off the sleeve, cool overcast light, frozen spray, teal-and-tan grade."},
-   {beat:"Detalle",cam:"100mm macro · la gota resbala",vo:"The membrane doesn't even notice.",pr:"100mm macro, wet membrane sleeve, river water beading and rolling off, fabric dry beneath, shallow DOF."},
-   {beat:"Cierre",cam:"85mm contrapicado · cumbre, hora azul",vo:"Nothing stops you. Modeka. Your terrain, your rules.",pr:"85mm low hero at a misty pass summit, blue hour, he removes the helmet, breath visible, cold rim light, MODEKA logo crisp — new place vs the desert open."}]},
- {num:"2",prod:"Paneo LT",fam:"Touring",seg:"f",voz:"Cálida, refinada",vozsrc:"audio/vo-2.mp3",tag:"Lightness with character.",
-  idea:"Desierto en verano a toda velocidad. Pelo SUELTO consistente. Calor y aire = ventilación.",
+   {beat:{en:"Hook",de:"Hook"},cam:{en:"21mm anamorphic · rising crane, dawn",de:"21mm anamorph · aufsteigender Kran, Morgengrauen"},vo:"Some roads aren't on any map.",pr:"Wide 21mm anamorphic, low crane rising from cracked desert floor at dawn to reveal a lone rider on a rally bike, silhouette against a burning orange sky, backlit dust, Kodak Vision3 500T grade, epic."},
+   {beat:{en:"Action",de:"Action"},cam:{en:"Top-down drone · descending at speed",de:"Drohne von oben · Abstieg bei Tempo"},vo:"From dry desert…",pr:"Aerial top-down drone descending, the rider carving a dust trail across an empty ochre plateau at speed, hard midday sun, high contrast, tiny figure in vast land."},
+   {beat:{en:"Proof",de:"Beweis"},cam:{en:"50mm · slow motion, river crossing",de:"50mm · Zeitlupe, Flussdurchquerung"},vo:"…to mountain river, in a single day.",pr:"Eye-level 50mm slow-mo, front wheel hits a shallow river crossing, water sheeting off the sleeve, cool overcast light, frozen spray, teal-and-tan grade."},
+   {beat:{en:"Detail",de:"Detail"},cam:{en:"100mm macro · the drop slides off",de:"100mm Makro · der Tropfen perlt ab"},vo:"The membrane doesn't even notice.",pr:"100mm macro, wet membrane sleeve, river water beading and rolling off, fabric dry beneath, shallow DOF."},
+   {beat:{en:"Close",de:"Abschluss"},cam:{en:"85mm low angle · summit, blue hour",de:"85mm Untersicht · Gipfel, blaue Stunde"},vo:"Nothing stops you. Modeka. Your terrain, your rules.",pr:"85mm low hero at a misty pass summit, blue hour, he removes the helmet, breath visible, cold rim light, MODEKA logo crisp — new place vs the desert open."}]},
+ {num:"2",prod:"Paneo LT",fam:{en:"Touring",de:"Touring"},seg:"f",voz:{en:"Warm, refined",de:"Warm, raffiniert"},vozsrc:"audio/vo-2.mp3",tag:"Lightness with character.",
+  idea:{en:"Summer desert at full speed. LOOSE hair, consistent. Heat and air = ventilation.",de:"Sommerwüste bei voller Fahrt. OFFENES Haar, durchgängig. Hitze und Luft = Belüftung."},
   vo:"Summer shouldn't weigh you down. Paneo LT: laminated build, ventilation that breathes with you, mile after burning mile you barely feel it. Lightness with character. Modeka.",
-  mus:"Electrónica cálida con pulso, sensación de velocidad y aire.",
+  mus:{en:"Warm electronic with a pulse, a sense of speed and air.",de:"Warme Elektronik mit Puls, Gefühl von Geschwindigkeit und Luft."},
   shots:[
-   {beat:"Gancho",cam:"24mm · cámara de persecución a ras",vo:"Summer shouldn't weigh you down.",pr:"24mm low chase-car tracking at speed, a woman rides a touring bike down a heat-shimmering desert highway at noon, LOOSE hair streaming, mirage, bleached warm grade — loose hair in every shot."},
-   {beat:"Acción",cam:"85mm · barrido lateral a velocidad",vo:"Lightness you feel at every throttle.",pr:"85mm profile pan at speed, laminated jacket vents fluttering, loose hair whipping, blurred dunes, golden warm light."},
-   {beat:"Prueba",cam:"100mm macro · flujo de aire",vo:"Ventilation that breathes with you.",pr:"100mm macro on the mesh ventilation panel, hot air rippling through the weave, sand motes drifting, raking sun."},
-   {beat:"Giro",cam:"Dron 3/4 · curva del desierto",vo:"Mile after burning mile, you barely feel it.",pr:"High 3/4 drone orbit as she leans through a sweeping desert bend, long shadow, dust halo, heat haze."},
-   {beat:"Cierre",cam:"Primer plano · se quita el casco, pelo suelto",vo:"Lightness with character. Modeka.",pr:"She stops at a lone desert fuel stop at golden hour, removes helmet, LOOSE hair falls the same, easy smile, warm backlight — new scene vs the highway open."}]},
- {num:"3",prod:"Leather Icons",fam:"Urban · Clásico",seg:"m",voz:"Profunda, con clase",vozsrc:"audio/vo-3.mp3",tag:"Since 1946.",
-  idea:"Garaje noir. Arranca la moto, acelerones, el motor ruge como suena el cuero. Sonido protagonista, sexy.",
+   {beat:{en:"Hook",de:"Hook"},cam:{en:"24mm · low chase-car tracking",de:"24mm · tiefe Verfolgungskamera"},vo:"Summer shouldn't weigh you down.",pr:"24mm low chase-car tracking at speed, a woman rides a touring bike down a heat-shimmering desert highway at noon, LOOSE hair streaming, mirage, bleached warm grade — loose hair in every shot."},
+   {beat:{en:"Action",de:"Action"},cam:{en:"85mm · side pan at speed",de:"85mm · seitlicher Schwenk bei Tempo"},vo:"Lightness you feel at every throttle.",pr:"85mm profile pan at speed, laminated jacket vents fluttering, loose hair whipping, blurred dunes, golden warm light."},
+   {beat:{en:"Proof",de:"Beweis"},cam:{en:"100mm macro · airflow",de:"100mm Makro · Luftstrom"},vo:"Ventilation that breathes with you.",pr:"100mm macro on the mesh ventilation panel, hot air rippling through the weave, sand motes drifting, raking sun."},
+   {beat:{en:"Twist",de:"Wendung"},cam:{en:"3/4 drone · desert bend",de:"3/4-Drohne · Wüstenkurve"},vo:"Mile after burning mile, you barely feel it.",pr:"High 3/4 drone orbit as she leans through a sweeping desert bend, long shadow, dust halo, heat haze."},
+   {beat:{en:"Close",de:"Abschluss"},cam:{en:"Close-up · helmet off, loose hair",de:"Nahaufnahme · Helm ab, offenes Haar"},vo:"Lightness with character. Modeka.",pr:"She stops at a lone desert fuel stop at golden hour, removes helmet, LOOSE hair falls the same, easy smile, warm backlight — new scene vs the highway open."}]},
+ {num:"3",prod:"Leather Icons",fam:{en:"Urban · Classic",de:"Urban · Klassik"},seg:"m",voz:{en:"Deep, classy",de:"Tief, mit Klasse"},vozsrc:"audio/vo-3.mp3",tag:"Since 1946.",
+  idea:{en:"Noir garage. Start the bike, throttle blips, the engine growls like the leather sounds. Sound is the star, sexy.",de:"Noir-Garage. Motorrad starten, Gasstöße, der Motor knurrt wie das Leder klingt. Der Sound ist der Star, sexy."},
   vo:"Some things time never touches. Leather, tanned to last, the soul of the classics. Start her up… and she growls like the leather sounds. Leather Icons. Since 1946. Modeka.",
-  mus:"SONIDO PROTAGONISTA: arranque + acelerones (throttle blips), cuero que cruje, eco de garaje. Blues-rock lento y sensual. Sexy.",
+  mus:{en:"SOUND IS THE STAR: start-up + throttle blips, creaking leather, garage echo. Slow, sensual blues-rock. Sexy.",de:"SOUND IST DER STAR: Start + Gasstöße (Throttle Blips), knarzendes Leder, Garagenhall. Langsamer, sinnlicher Blues-Rock. Sexy."},
   shots:[
-   {beat:"Gancho",cam:"50mm · garaje en penumbra, práctica cálida",vo:"Some things time never touches.",pr:"50mm moody night garage, single warm overhead practical, a very attractive man in a black leather jacket beside a matte-black cafe racer, smoke in the beam, sensual noir."},
-   {beat:"Acción",cam:"35mm bajo · se sube a la café racer",vo:"Leather, tanned to last.",pr:"Low 35mm from the floor, he throws a leg over the cafe racer and settles, leather flexing, chrome catching light."},
-   {beat:"Prueba",cam:"Macro 100mm · el puño gira, arranca",vo:"Start her up… and she growls like the leather sounds.",pr:"Extreme macro on the gloved hand twisting the throttle, engine catches, exhaust heat-shimmer, spark, headlight snaps on. SFX engine start + blips."},
-   {beat:"Detalle",cam:"Macro · luz recorre cuero y cremallera",vo:"The soul of the classics.",pr:"Macro raking light across the leather grain, quilted shoulder and zip teeth, warm, supple texture."},
-   {beat:"Cierre",cam:"Contraluz de faro · sale a la calle mojada",vo:"Leather Icons. Since 1946. Modeka.",pr:"Backlit by the headlight, he rolls out of the garage into a wet night street, silhouette with rim glow, exhaust haze — moving exterior vs the static open. SFX last deep rev."}]},
- {num:"4",prod:"Panamericana II Lady",fam:"Adventure · mujer",seg:"f",voz:"Segura, poderosa",vozsrc:"audio/vo-4.mp3",tag:"For the one who won't settle.",
-  idea:"Cinético y DISTINTO: caballito, derrape en montaña, aparca y posa. Cortes rápidos, nada de cámara lenta.",
+   {beat:{en:"Hook",de:"Hook"},cam:{en:"50mm · dim garage, warm practical",de:"50mm · dämmrige Garage, warmes Praktikallicht"},vo:"Some things time never touches.",pr:"50mm moody night garage, single warm overhead practical, a very attractive man in a black leather jacket beside a matte-black cafe racer, smoke in the beam, sensual noir."},
+   {beat:{en:"Action",de:"Action"},cam:{en:"35mm low · mounting the café racer",de:"35mm tief · Aufsteigen auf den Café Racer"},vo:"Leather, tanned to last.",pr:"Low 35mm from the floor, he throws a leg over the cafe racer and settles, leather flexing, chrome catching light."},
+   {beat:{en:"Proof",de:"Beweis"},cam:{en:"100mm macro · the throttle turns, it starts",de:"100mm Makro · der Griff dreht, sie startet"},vo:"Start her up… and she growls like the leather sounds.",pr:"Extreme macro on the gloved hand twisting the throttle, engine catches, exhaust heat-shimmer, spark, headlight snaps on. SFX engine start + blips."},
+   {beat:{en:"Detail",de:"Detail"},cam:{en:"Macro · light sweeps leather and zip",de:"Makro · Licht streift Leder und Reißverschluss"},vo:"The soul of the classics.",pr:"Macro raking light across the leather grain, quilted shoulder and zip teeth, warm, supple texture."},
+   {beat:{en:"Close",de:"Abschluss"},cam:{en:"Headlight backlight · out into the wet street",de:"Scheinwerfer-Gegenlicht · hinaus auf die nasse Straße"},vo:"Leather Icons. Since 1946. Modeka.",pr:"Backlit by the headlight, he rolls out of the garage into a wet night street, silhouette with rim glow, exhaust haze — moving exterior vs the static open. SFX last deep rev."}]},
+ {num:"4",prod:"Panamericana II Lady",fam:{en:"Adventure · Women",de:"Adventure · Damen"},seg:"f",voz:{en:"Confident, powerful",de:"Selbstbewusst, kraftvoll"},vozsrc:"audio/vo-4.mp3",tag:"For the one who won't settle.",
+  idea:{en:"Kinetic and DIFFERENT: wheelie, mountain drift, park and pose. Fast cuts, no slow motion.",de:"Kinetisch und ANDERS: Wheelie, Bergdrift, parken und posieren. Schnelle Schnitte, keine Zeitlupe."},
   vo:"Adventure doesn't do borrowed sizes. Wheelie, drift, dust. Panamericana Two Lady: a women's own cut, certified protection. For the one who won't settle. Modeka.",
-  mus:"Percusión potente, ritmo alto, whip-pans. Estilo distinto al resto.",
+  mus:{en:"Powerful percussion, high tempo, whip-pans. A style different from the rest.",de:"Kraftvolle Percussion, hohes Tempo, Whip-Pans. Ein Stil, anders als der Rest."},
   shots:[
-   {beat:"Gancho",cam:"24mm dutch, picado bajo · caballito",vo:"Adventure doesn't do borrowed sizes.",pr:"Dutch-angle low 24mm, dust explosion as she yanks an enduro into a steep WHEELIE up a mountain dirt track, front wheel high, whip-pan energy, punchy saturated grade — louder/faster than the other ads."},
-   {beat:"Acción",cam:"50mm · seguimiento del derrape",vo:"Wheelie, drift, dust.",pr:"50mm tracking a mountain DRIFT, rear wheel spraying a wide dust arc, body leaned hard, high-shutter crisp, dramatic sky."},
-   {beat:"Prueba",cam:"Push-in rápido · glow protecciones CE",vo:"A women's own cut, certified protection.",pr:"Fast push-in 3/4, glowing outline igniting along the CE protectors at shoulder and elbow as she rides, dust backlit."},
-   {beat:"Giro",cam:"35mm hero bajo · frena y aparca",vo:"For the one who won't settle…",pr:"Low hero 35mm, she brakes hard and stabs the kickstand, dust settling, mountain vista behind, golden light."},
-   {beat:"Cierre",cam:"85mm · se baja y posa",vo:"…Modeka.",pr:"85mm, she dismounts and strikes a confident power pose against the mountain vista, hands on hips, chin up, dust haze — new beat vs the wheelie open."}]},
- {num:"5",prod:"Atlaz",fam:"Adventure · 4 estaciones",seg:"m",voz:"Cálida, cercana",vozsrc:"audio/vo-5.mp3",tag:"Four seasons, one companion.",
-  idea:"Narrativa: los demás se refugian de la lluvia, él sigue su viaje a la cima. Del chubasco al amanecer dorado.",
+   {beat:{en:"Hook",de:"Hook"},cam:{en:"24mm dutch, low angle · wheelie",de:"24mm Dutch, Untersicht · Wheelie"},vo:"Adventure doesn't do borrowed sizes.",pr:"Dutch-angle low 24mm, dust explosion as she yanks an enduro into a steep WHEELIE up a mountain dirt track, front wheel high, whip-pan energy, punchy saturated grade — louder/faster than the other ads."},
+   {beat:{en:"Action",de:"Action"},cam:{en:"50mm · tracking the drift",de:"50mm · Verfolgung der Drift"},vo:"Wheelie, drift, dust.",pr:"50mm tracking a mountain DRIFT, rear wheel spraying a wide dust arc, body leaned hard, high-shutter crisp, dramatic sky."},
+   {beat:{en:"Proof",de:"Beweis"},cam:{en:"Fast push-in · CE protector glow",de:"Schneller Push-in · Glühen der CE-Protektoren"},vo:"A women's own cut, certified protection.",pr:"Fast push-in 3/4, glowing outline igniting along the CE protectors at shoulder and elbow as she rides, dust backlit."},
+   {beat:{en:"Twist",de:"Wendung"},cam:{en:"35mm low hero · brakes and parks",de:"35mm Hero tief · bremst und parkt"},vo:"For the one who won't settle…",pr:"Low hero 35mm, she brakes hard and stabs the kickstand, dust settling, mountain vista behind, golden light."},
+   {beat:{en:"Close",de:"Abschluss"},cam:{en:"85mm · dismounts and poses",de:"85mm · steigt ab und posiert"},vo:"…Modeka.",pr:"85mm, she dismounts and strikes a confident power pose against the mountain vista, hands on hips, chin up, dust haze — new beat vs the wheelie open."}]},
+ {num:"5",prod:"Atlaz",fam:{en:"Adventure · 4 seasons",de:"Adventure · 4 Jahreszeiten"},seg:"m",voz:{en:"Warm, close",de:"Warm, nahbar"},vozsrc:"audio/vo-5.mp3",tag:"Four seasons, one companion.",
+  idea:{en:"Narrative: others take shelter from the rain, he keeps riding to the summit. From downpour to golden dawn.",de:"Narrativ: die anderen flüchten vor dem Regen, er fährt weiter zum Gipfel. Vom Regenguss zur goldenen Morgendämmerung."},
   vo:"The weather changes. You don't stop. While others take shelter, the Atlaz keeps going: a three-in-one from sun to storm, reflective when the light fades. Four seasons, one companion. Modeka.",
-  mus:"Cinemático cálido, de la tensión de la lluvia al crescendo esperanzador de la cima.",
+  mus:{en:"Warm cinematic, from the tension of the rain to the hopeful crescendo at the summit.",de:"Warm filmisch, von der Spannung des Regens zum hoffnungsvollen Crescendo am Gipfel."},
   shots:[
-   {beat:"Gancho",cam:"28mm wide · lluvia, otros parados",vo:"The weather changes. You don't stop.",pr:"Wide 28mm, a mountain road in heavy dusk rain, other riders and a car pulled over under a shelter with hazards glowing, while the lone rider rides ON past them through the spray, determined, cold rainy grade."},
-   {beat:"Acción",cam:"85mm sobre el hombro · lluvia en la visera",vo:"While others take shelter, the Atlaz keeps going.",pr:"Close 85mm over-the-shoulder through the downpour, rain streaking the visor, the jacket shedding water, reflective piping catching headlights."},
-   {beat:"Prueba",cam:"Noche · el faro enciende el reflectante",vo:"From sun to storm. Reflective when the light fades.",pr:"Night, a car headlight rakes across him, the reflective piping ignites bright white against the dark rain, water in the air."},
-   {beat:"Giro",cam:"Wide épico · amaina y sube",vo:"One jacket, four seasons.",pr:"The rain thins, cold blue light breaks, he climbs higher, breath visible, the same jacket now against snow-dusted rock, epic wide."},
-   {beat:"Cierre",cam:"Amanecer dorado · cima, mar de nubes",vo:"One companion. Modeka.",pr:"Golden dawn at the summit above a sea of clouds, he stops and removes the helmet, quiet triumph, warm rim light — totally different scene/light vs the rainy open."}]},
+   {beat:{en:"Hook",de:"Hook"},cam:{en:"28mm wide · rain, others stopped",de:"28mm weit · Regen, andere halten"},vo:"The weather changes. You don't stop.",pr:"Wide 28mm, a mountain road in heavy dusk rain, other riders and a car pulled over under a shelter with hazards glowing, while the lone rider rides ON past them through the spray, determined, cold rainy grade."},
+   {beat:{en:"Action",de:"Action"},cam:{en:"85mm over-the-shoulder · rain on the visor",de:"85mm über die Schulter · Regen auf dem Visier"},vo:"While others take shelter, the Atlaz keeps going.",pr:"Close 85mm over-the-shoulder through the downpour, rain streaking the visor, the jacket shedding water, reflective piping catching headlights."},
+   {beat:{en:"Proof",de:"Beweis"},cam:{en:"Night · headlight ignites the reflective",de:"Nacht · Scheinwerfer entzündet das Reflektierende"},vo:"From sun to storm. Reflective when the light fades.",pr:"Night, a car headlight rakes across him, the reflective piping ignites bright white against the dark rain, water in the air."},
+   {beat:{en:"Twist",de:"Wendung"},cam:{en:"Epic wide · rain eases, he climbs",de:"Episch weit · Regen lässt nach, er steigt"},vo:"One jacket, four seasons.",pr:"The rain thins, cold blue light breaks, he climbs higher, breath visible, the same jacket now against snow-dusted rock, epic wide."},
+   {beat:{en:"Close",de:"Abschluss"},cam:{en:"Golden dawn · summit, sea of clouds",de:"Goldene Morgendämmerung · Gipfel, Wolkenmeer"},vo:"One companion. Modeka.",pr:"Golden dawn at the summit above a sea of clouds, he stops and removes the helmet, quiet triumph, warm rim light — totally different scene/light vs the rainy open."}]},
 ];
+const T={fam:{en:"Family",de:"Familie"},voz:{en:"Voice",de:"Stimme"},shots:{en:"Shots",de:"Shots"},dur:{en:"Duration",de:"Länge"},fmt:{en:"Formats",de:"Formate"},cam:{en:"Camera",de:"Kamera"},script:{en:"Voice script",de:"Sprechtext"},sound:{en:"Sound",de:"Sound"},gen:{en:"generating…",de:"generiert…"},prod:{en:"Real voice (OpenArt) in production…",de:"Echte Stimme (OpenArt) in Produktion…"}};
+function d2(o){return `data-de="${o.de}"`;}
 document.getElementById("ads").innerHTML=ADS.map(a=>`
   <div class="ad">
-    <div class="ahead"><span class="anum">${a.num}</span><h3>${a.prod}</h3><span class="segb ${V[a.seg].cls}">${V[a.seg].seg}</span></div>
+    <div class="ahead"><span class="anum">${a.num}</span><h3>${a.prod}</h3><span class="segb ${V[a.seg].cls}" ${d2(V[a.seg].seg)}>${V[a.seg].seg.en}</span></div>
     <div class="tag">${a.tag}</div>
-    <div class="idea">${a.idea}</div>
-    <div class="ameta"><span class="chip"><b>Familia</b>${a.fam}</span><span class="chip"><b>Voz</b>${V[a.seg].seg} · ${a.voz}</span><span class="chip"><b>Planos</b>5</span><span class="chip"><b>Duración</b>18 s</span><span class="chip"><b>Formatos</b>9:16 + 16:9</span></div>
+    <div class="idea" ${d2(a.idea)}>${a.idea.en}</div>
+    <div class="ameta"><span class="chip"><b ${d2(T.fam)}>${T.fam.en}</b><span ${d2(a.fam)}>${a.fam.en}</span></span><span class="chip"><b ${d2(T.voz)}>${T.voz.en}</b><span data-de="${V[a.seg].seg.de} · ${a.voz.de}">${V[a.seg].seg.en} · ${a.voz.en}</span></span><span class="chip"><b ${d2(T.shots)}>${T.shots.en}</b>5</span><span class="chip"><b ${d2(T.dur)}>${T.dur.en}</b>18 s</span><span class="chip"><b ${d2(T.fmt)}>${T.fmt.en}</b>9:16 + 16:9</span></div>
     <div class="sb">
       ${a.shots.map((s,i)=>`
         <div class="shot">
-          <div class="im"><img loading="lazy" src="ads/${a.num}-${i+1}.png" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><div class="ph" style="display:none">generando…</div>
-            <span class="beat">${s.beat}</span><span class="tc">${TC[i]}</span></div>
+          <div class="im"><img loading="lazy" src="ads/${a.num}-${i+1}.png" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><div class="ph" style="display:none" ${d2(T.gen)}>${T.gen.en}</div>
+            <span class="beat" ${d2(s.beat)}>${s.beat.en}</span><span class="tc">${TC[i]}</span></div>
           <div class="bd">
-            <div class="cam"><b>Cámara</b>${s.cam}</div>
+            <div class="cam"><b ${d2(T.cam)}>${T.cam.en}</b><span ${d2(s.cam)}>${s.cam.en}</span></div>
             <div class="vo">“${s.vo}”</div>
             <details><summary></summary><div class="pr">${s.pr}</div></details>
           </div>
         </div>`).join("")}
     </div>
-    <div class="script"><span class="k">Guion de voz (${V[a.seg].seg})</span><p>“${a.vo}”</p>${a.vozsrc?`<audio controls src="${a.vozsrc}" style="width:100%;margin-top:10px"></audio>`:`<div class="mus" style="color:#e11d2a">Voz real (OpenArt) en producción…</div>`}<div class="mus"><b>Sonido</b>${a.mus}</div></div>
+    <div class="script"><span class="k" data-de="${T.script.de} (${V[a.seg].seg.de})">${T.script.en} (${V[a.seg].seg.en})</span><p>“${a.vo}”</p>${a.vozsrc?`<audio controls src="${a.vozsrc}" style="width:100%;margin-top:10px"></audio>`:`<div class="mus" style="color:#e11d2a" ${d2(T.prod)}>${T.prod.en}</div>`}<div class="mus"><b ${d2(T.sound)}>${T.sound.en}</b><span ${d2(a.mus)}>${a.mus.en}</span></div></div>
   </div>`).join("");
+if(window.setLang)setLang(window.LANG||'en');
 </script>
 </body>
 </html>

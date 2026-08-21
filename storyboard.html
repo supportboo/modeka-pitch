@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="es">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>MODEKA — Equipación premium desde 1946</title>
+<title>MODEKA — Premium gear since 1946</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -76,103 +76,115 @@
 </style>
 </head>
 <body>
-<nav class="xnav"><a href="index.html" class="xnav__h">MODEKA<span>.</span></a><a href="modeka-final.html">Presentación</a><a href="ad-bible.html">Anuncios</a><a href="storyboard.html">Book</a></nav>
-<style>.xnav{position:fixed;top:12px;right:12px;z-index:200;display:flex;gap:4px;align-items:center;background:rgba(10,10,14,.82);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid #24242c;border-radius:999px;padding:6px 8px}.xnav a{color:#cfcfd6;font-size:11px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;text-decoration:none;padding:6px 11px;border-radius:999px;transition:.2s;white-space:nowrap;font-family:'Inter',system-ui,sans-serif}.xnav a:hover{color:#fff;background:rgba(255,255,255,.08)}.xnav__h{font-family:'Anton',sans-serif!important;color:#fff!important;font-size:14px!important}.xnav__h span{color:#e11d2a}@media(max-width:560px){.xnav{top:8px;right:8px;padding:4px 5px}.xnav a{font-size:10px;padding:5px 7px}}</style>
+<script>
+/* ===== i18n core (EN default · DE toggle) ===== */
+window.LANG='en';window.__i18n=[];
+function applyLang(){var L=window.LANG;
+ document.querySelectorAll('[data-de]').forEach(function(el){if(el.dataset.en===undefined)el.dataset.en=el.innerHTML;el.innerHTML=(L==='de')?el.getAttribute('data-de'):el.dataset.en;});
+ window.__i18n.forEach(function(fn){try{fn(L);}catch(e){}});}
+function setLang(l){window.LANG=l;document.documentElement.lang=l;document.querySelectorAll('.langtog b').forEach(function(b){b.classList.toggle('on',b.getAttribute('data-l')===l);});applyLang();}
+</script>
+<div class="langtog" id="langtog"><b data-l="en" class="on" onclick="setLang('en')">EN</b><b data-l="de" onclick="setLang('de')">DE</b></div>
+<nav class="xnav"><a href="index.html" class="xnav__h">MODEKA<span>.</span></a><a href="modeka-final.html" data-de="Präsentation">Presentation</a><a href="ad-bible.html" data-de="Anzeigen">Ads</a><a href="storyboard.html" data-de="Buch">Book</a></nav>
+<style>.xnav{position:fixed;top:12px;right:12px;z-index:200;display:flex;gap:4px;align-items:center;background:rgba(10,10,14,.82);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid #24242c;border-radius:999px;padding:6px 8px}.xnav a{color:#cfcfd6;font-size:11px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;text-decoration:none;padding:6px 11px;border-radius:999px;transition:.2s;white-space:nowrap;font-family:'Inter',system-ui,sans-serif}.xnav a:hover{color:#fff;background:rgba(255,255,255,.08)}.xnav__h{font-family:'Anton',sans-serif!important;color:#fff!important;font-size:14px!important}.xnav__h span{color:#e11d2a}@media(max-width:560px){.xnav{top:8px;right:8px;padding:4px 5px}.xnav a{font-size:10px;padding:5px 7px}}
+.langtog{position:fixed;top:12px;left:12px;z-index:200;display:flex;gap:2px;background:rgba(10,10,14,.82);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid #24242c;border-radius:999px;padding:5px}.langtog b{font-size:11px;font-weight:700;color:#8a8a92;padding:6px 12px;border-radius:999px;cursor:pointer;font-family:'Inter',system-ui,sans-serif}.langtog b.on{background:var(--red);color:#fff}@media(max-width:560px){.langtog{top:8px;left:8px;padding:3px}.langtog b{padding:5px 9px}}</style>
 <div class="grain"></div>
-<div class="bar"><b>MODEKA<span>.</span></b><span class="t">Premium · desde 1946</span></div>
+<div class="bar"><b>MODEKA<span>.</span></b><span class="t" data-de="Premium · seit 1946">Premium · since 1946</span></div>
 
 <!-- HERO -->
 <section class="hero">
   <div class="hero__bg"><img src="storyboard/5a.png" alt=""></div>
   <div class="hero__in">
-    <span class="yr">Desarrollada en Alemania · hecha para rutas de verdad</span>
+    <span class="yr" data-de="Entwickelt in Deutschland · gemacht für echte Touren">Developed in Germany · built for real roads</span>
     <h1 class="anton">MODEKA<span style="color:var(--red)">.</span></h1>
-    <p class="sub">Equipación de moto premium desde 1946. Tu terreno lo decides tú; nosotros ponemos la que aguanta a tu lado, kilómetro tras kilómetro.</p>
+    <p class="sub" data-de="Premium-Motorradausrüstung seit 1946. Dein Terrain bestimmst du; wir liefern die Ausrüstung, die an deiner Seite durchhält, Kilometer für Kilometer.">Premium motorcycle gear since 1946. Your terrain is your call; we bring the gear that holds up beside you, kilometre after kilometre.</p>
   </div>
 </section>
 
 <!-- LOS ICONOS -->
 <section>
-  <div class="center reveal"><span class="k">Los iconos</span><h2 class="anton">Cada prenda, en su <em>terreno</em></h2>
-    <p>La que eliges una y otra vez. Nacida para una forma de rodar, con el oficio de Modeka dentro. Con su piloto, su clima, su momento.</p></div>
+  <div class="center reveal"><span class="k" data-de="Die Ikonen">The icons</span><h2 class="anton" data-de="Jedes Kleidungsstück, in seinem <em>Terrain</em>">Every garment, in its <em>terrain</em></h2>
+    <p data-de="Das, was du immer wieder wählst. Geboren für eine Art zu fahren, mit Modekas Handwerk darin. Mit seinem Fahrer, seinem Wetter, seinem Moment.">The one you choose again and again. Born for a way of riding, with Modeka's craft inside. With its rider, its weather, its moment.</p></div>
   <div id="prods"></div>
 </section>
 
 <!-- TECNOLOGIA QUE SE VE -->
 <section>
-  <div class="center reveal"><span class="k">Tecnología que se ve</span><h2 class="anton">No lo contamos. Lo <em>enseñamos</em></h2>
-    <p>Impermeable, ventilada, protegida, reflectante, de cuero de verdad. Lo que en una ficha es una línea, en tu ruta es la diferencia.</p></div>
+  <div class="center reveal"><span class="k" data-de="Sichtbare Technik">Technology you can see</span><h2 class="anton" data-de="Wir erzählen es nicht. Wir <em>zeigen</em> es">We don't tell it. We <em>show</em> it</h2>
+    <p data-de="Wasserdicht, belüftet, geschützt, reflektierend, aus echtem Leder. Was auf einem Datenblatt eine Zeile ist, macht auf deiner Tour den Unterschied.">Waterproof, ventilated, protected, reflective, real leather. What's a line on a spec sheet is the difference on your ride.</p></div>
   <div class="fxgrid reveal" id="fxgrid"></div>
 </section>
 
 <!-- 4 MUNDOS -->
 <section>
-  <div class="center reveal"><span class="k">Cuatro mundos · un mismo oficio</span><h2 class="anton">Listos para <em>cualquier terreno</em></h2>
-    <p>Touring, Adventure, Urban y Sport. Cada mundo con su carácter; todos, la misma ingeniería alemana.</p></div>
+  <div class="center reveal"><span class="k" data-de="Vier Welten · ein Handwerk">Four worlds · one craft</span><h2 class="anton" data-de="Bereit für <em>jedes Terrain</em>">Ready for <em>any terrain</em></h2>
+    <p data-de="Touring, Adventure, Urban und Sport. Jede Welt mit eigenem Charakter; alle mit derselben deutschen Technik.">Touring, Adventure, Urban and Sport. Each world with its own character; all with the same German engineering.</p></div>
   <div class="worlds reveal">
-    <div class="wc"><img src="modeka/line-touring.jpg" alt="Touring"><div class="wc__o"><span>Touring</span><h4>La libertad<br>infinita</h4></div></div>
-    <div class="wc"><img src="modeka/line-adventure.jpg" alt="Adventure"><div class="wc__o"><span>Adventure</span><h4>Cualquier<br>terreno</h4></div></div>
-    <div class="wc"><img src="modeka/line-urban.jpg" alt="Urban"><div class="wc__o"><span>Urban</span><h4>El día a día<br>sobre 2 ruedas</h4></div></div>
-    <div class="wc"><img src="modeka/line-sport.jpg" alt="Sport"><div class="wc__o"><span>Sport</span><h4>La caza de<br>la velocidad</h4></div></div>
+    <div class="wc"><img src="modeka/line-touring.jpg" alt="Touring"><div class="wc__o"><span>Touring</span><h4 data-de="Grenzenlose<br>Freiheit">Endless<br>freedom</h4></div></div>
+    <div class="wc"><img src="modeka/line-adventure.jpg" alt="Adventure"><div class="wc__o"><span>Adventure</span><h4 data-de="Jedes<br>Terrain">Any<br>terrain</h4></div></div>
+    <div class="wc"><img src="modeka/line-urban.jpg" alt="Urban"><div class="wc__o"><span>Urban</span><h4 data-de="Der Alltag<br>auf zwei Rädern">Everyday life<br>on two wheels</h4></div></div>
+    <div class="wc"><img src="modeka/line-sport.jpg" alt="Sport"><div class="wc__o"><span>Sport</span><h4 data-de="Die Jagd<br>nach Speed">The chase<br>for speed</h4></div></div>
   </div>
 </section>
 
 <!-- CIERRE -->
 <section class="end reveal">
-  <span class="k">80 años rodando</span>
-  <h2 class="anton">Elige tu mundo.<br>Elige <em>Modeka</em>.</h2>
-  <p style="color:var(--mut);max-width:520px;margin:16px auto 0">La seguridad no debería ser cara. Protección certificada, materiales que aguantan y el temple de quien lleva desde 1946 haciendo equipación para rutas de verdad.</p>
-  <a class="btn" href="#">Descubre la colección</a>
+  <span class="k" data-de="80 Jahre unterwegs">80 years on the road</span>
+  <h2 class="anton" data-de="Wähle deine Welt.<br>Wähle <em>Modeka</em>.">Choose your world.<br>Choose <em>Modeka</em>.</h2>
+  <p style="color:var(--mut);max-width:520px;margin:16px auto 0" data-de="Sicherheit sollte nicht teuer sein. Zertifizierter Schutz, Materialien, die halten, und die Entschlossenheit eines Herstellers, der seit 1946 Ausrüstung für echte Touren baut.">Safety shouldn't be expensive. Certified protection, materials that last, and the resolve of a maker that's built gear for real roads since 1946.</p>
+  <a class="btn" href="#" data-de="Entdecke die Kollektion">Discover the collection</a>
 </section>
 
-<footer>Muestra creativa · Boomatik para Modeka. Imágenes hiperrealistas a partir de las fotos reales de catálogo; las prendas se reproducen sin alterar su diseño. Motos y fondos ilustrativos. El movimiento y los FX se producen en vídeo sobre estos fotogramas.</footer>
+<footer data-de="Kreative Schau · Boomatik für Modeka. Hyperrealistische Bilder aus den echten Katalogfotos; Kleidungsstücke ohne Designänderung wiedergegeben. Motorräder und Hintergründe illustrativ. Bewegung und FX werden im Video über diesen Frames produziert.">Creative showcase · Boomatik for Modeka. Hyperrealistic images from the real catalogue photos; garments reproduced without altering their design. Motorcycles and backgrounds illustrative. Motion and FX are produced in video over these frames.</footer>
 
 <script>
 const PRODS=[
- {num:"1",n:"Panamericana II",fam:"Adventure",sell:"La que <em>cruza continentes</em>.",
-  terreno:"Pista y asfalto en un mismo viaje",perfil:"Para quien sale semanas, no horas",momento:"Cruzar un puerto al amanecer",
-  fx:2,fxlab:"IMPERMEABLE",caps:["En su terreno","En movimiento","El agua no entra"]},
- {num:"2",n:"Paneo LT",fam:"Touring",sell:"Ligera. Laminada. <em>Respira contigo</em>.",
-  terreno:"Puertos alpinos y día a día",perfil:"Para el que no quiere cargar peso",momento:"La escapada de verano",
-  fx:2,fxlab:"VENTILACIÓN",caps:["En los Alpes","En giro","El aire pasa"]},
- {num:"3",n:"Leather Icons",fam:"Urban · Clásico",sell:"El estilo que <em>nunca pasa</em>.",
-  terreno:"Ciudad y carreteras con curvas",perfil:"Para el que rueda por placer",momento:"Café y mañana de domingo",
-  fx:2,fxlab:"CUERO PREMIUM",caps:["Café racer","El grano del cuero","Oficio desde 1946"]},
- {num:"4",n:"Panamericana II Lady",fam:"Adventure · mujer",sell:"Mismo temple. <em>Patrón propio</em>.",
-  terreno:"Todoterreno, corte de mujer",perfil:"Para la piloto que no se conforma",momento:"Salir del asfalto",
-  fx:1,fxlab:"PROTECCIÓN CE",caps:["Campo dorado","Protección CE","La mirada"]},
- {num:"5",n:"Atlaz",fam:"Adventure · 4 estaciones",sell:"Del sol al chubasco, <em>sin parar</em>.",
-  terreno:"Alta montaña, cualquier clima",perfil:"Para el de las cuatro estaciones",momento:"Que anochezca y siga lloviendo",
-  fx:2,fxlab:"REFLECTANTE",caps:["Sobre las nubes","El ribete brilla","De noche te ven"]},
+ {num:"1",n:"Panamericana II",fam:{en:"Adventure",de:"Adventure"},sell:{en:"The one that <em>crosses continents</em>.",de:"Die, die <em>Kontinente durchquert</em>."},
+  terreno:{en:"Trail and tarmac in one trip",de:"Piste und Asphalt auf einer Reise"},perfil:{en:"For those who leave for weeks, not hours",de:"Für alle, die wochenlang unterwegs sind, nicht stundenlang"},momento:{en:"Crossing a pass at dawn",de:"Einen Pass im Morgengrauen queren"},
+  fx:2,fxlab:{en:"WATERPROOF",de:"WASSERDICHT"},caps:{en:["In its terrain","In motion","Water stays out"],de:["In seinem Terrain","In Bewegung","Das Wasser bleibt draußen"]}},
+ {num:"2",n:"Paneo LT",fam:{en:"Touring",de:"Touring"},sell:{en:"Light. Laminated. <em>Breathes with you</em>.",de:"Leicht. Laminiert. <em>Atmet mit dir</em>."},
+  terreno:{en:"Alpine passes and everyday",de:"Alpenpässe und Alltag"},perfil:{en:"For those who won't carry the weight",de:"Für alle, die kein Gewicht schleppen wollen"},momento:{en:"The summer getaway",de:"Der Sommerausflug"},
+  fx:2,fxlab:{en:"VENTILATION",de:"BELÜFTUNG"},caps:{en:["In the Alps","Leaning in","The air flows"],de:["In den Alpen","In der Kurve","Die Luft strömt"]}},
+ {num:"3",n:"Leather Icons",fam:{en:"Urban · Classic",de:"Urban · Klassik"},sell:{en:"The style that <em>never fades</em>.",de:"Der Stil, der <em>nie vergeht</em>."},
+  terreno:{en:"City and twisty roads",de:"Stadt und kurvige Straßen"},perfil:{en:"For those who ride for pleasure",de:"Für alle, die aus Leidenschaft fahren"},momento:{en:"Coffee and a Sunday morning",de:"Kaffee und ein Sonntagmorgen"},
+  fx:2,fxlab:{en:"PREMIUM LEATHER",de:"PREMIUM-LEDER"},caps:{en:["Café racer","The leather grain","Craft since 1946"],de:["Café Racer","Die Ledernarbung","Handwerk seit 1946"]}},
+ {num:"4",n:"Panamericana II Lady",fam:{en:"Adventure · Women",de:"Adventure · Damen"},sell:{en:"Same grit. <em>Her own cut</em>.",de:"Gleiche Härte. <em>Eigener Schnitt</em>."},
+  terreno:{en:"Off-road, women's cut",de:"Offroad, Damenschnitt"},perfil:{en:"For the rider who won't settle",de:"Für die Fahrerin, die sich nicht zufriedengibt"},momento:{en:"Leaving the tarmac",de:"Den Asphalt verlassen"},
+  fx:1,fxlab:{en:"CE PROTECTION",de:"CE-SCHUTZ"},caps:{en:["Golden field","CE protection","The gaze"],de:["Goldenes Feld","CE-Schutz","Der Blick"]}},
+ {num:"5",n:"Atlaz",fam:{en:"Adventure · 4 seasons",de:"Adventure · 4 Jahreszeiten"},sell:{en:"From sun to downpour, <em>without stopping</em>.",de:"Von Sonne bis Regenguss, <em>ohne Halt</em>."},
+  terreno:{en:"High mountains, any weather",de:"Hochgebirge, jedes Wetter"},perfil:{en:"For the four-seasons rider",de:"Für den Ganzjahresfahrer"},momento:{en:"Nightfall and still raining",de:"Es wird Nacht und regnet weiter"},
+  fx:2,fxlab:{en:"REFLECTIVE",de:"REFLEKTIEREND"},caps:{en:["Above the clouds","The piping glows","Seen at night"],de:["Über den Wolken","Die Paspel leuchtet","Nachts sichtbar"]}},
 ];
 const FX=[
- {id:"1c",vid:"videos/fx-impermeable.mp4",lab:"IMPERMEABLE",why:"La membrana repele el agua. Tú, seco."},
- {id:"2c",vid:"videos/fx-ventilacion.mp4",lab:"VENTILACIÓN",why:"Malla técnica: el aire pasa, el calor no se queda."},
- {id:"4b",vid:"videos/fx-proteccion.mp4",lab:"PROTECCIÓN CE",why:"Protecciones homologadas justo donde importan."},
- {id:"3c",vid:"videos/fx-cuero.mp4",lab:"CUERO PREMIUM",why:"Cuero de verdad, curtido para durar. Desde 1946."},
- {id:"5c",vid:"videos/fx-reflectante.mp4",lab:"REFLECTANTE",why:"Cuando cae la luz, tú sigues visible."},
+ {id:"1c",vid:"videos/fx-impermeable.mp4",lab:{en:"WATERPROOF",de:"WASSERDICHT"},why:{en:"The membrane repels water. You stay dry.",de:"Die Membran stößt Wasser ab. Du bleibst trocken."}},
+ {id:"2c",vid:"videos/fx-ventilacion.mp4",lab:{en:"VENTILATION",de:"BELÜFTUNG"},why:{en:"Technical mesh: air flows through, heat doesn't stay.",de:"Technisches Mesh: Luft strömt durch, Hitze bleibt nicht."}},
+ {id:"4b",vid:"videos/fx-proteccion.mp4",lab:{en:"CE PROTECTION",de:"CE-SCHUTZ"},why:{en:"Certified protectors right where they matter.",de:"Geprüfte Protektoren genau dort, wo es zählt."}},
+ {id:"3c",vid:"videos/fx-cuero.mp4",lab:{en:"PREMIUM LEATHER",de:"PREMIUM-LEDER"},why:{en:"Real leather, tanned to last. Since 1946.",de:"Echtes Leder, gegerbt für die Dauer. Seit 1946."}},
+ {id:"5c",vid:"videos/fx-reflectante.mp4",lab:{en:"REFLECTIVE",de:"REFLEKTIEREND"},why:{en:"When the light fades, you stay visible.",de:"Wenn das Licht schwindet, bleibst du sichtbar."}},
 ];
-const B=["","",""];
+const TL={terr:{en:"Terrain",de:"Terrain"},rider:{en:"Rider",de:"Fahrer"},mom:{en:"Moment",de:"Moment"}};
+function d2(o){return `data-de="${o.de}"`;}
 document.getElementById("prods").innerHTML=PRODS.map(p=>`
   <div class="prod reveal">
-    <div class="phead"><span class="pnum">${p.num}</span><h3>${p.n}</h3><span class="fam">${p.fam}</span></div>
-    <div class="sell">${p.sell}</div>
+    <div class="phead"><span class="pnum">${p.num}</span><h3>${p.n}</h3><span class="fam" ${d2(p.fam)}>${p.fam.en}</span></div>
+    <div class="sell" ${d2(p.sell)}>${p.sell.en}</div>
     <div class="tags">
-      <span class="tag"><b>Terreno</b>${p.terreno}</span>
-      <span class="tag"><b>Piloto</b>${p.perfil}</span>
-      <span class="tag"><b>Momento</b>${p.momento}</span>
+      <span class="tag"><b ${d2(TL.terr)}>${TL.terr.en}</b><span ${d2(p.terreno)}>${p.terreno.en}</span></span>
+      <span class="tag"><b ${d2(TL.rider)}>${TL.rider.en}</b><span ${d2(p.perfil)}>${p.perfil.en}</span></span>
+      <span class="tag"><b ${d2(TL.mom)}>${TL.mom.en}</b><span ${d2(p.momento)}>${p.momento.en}</span></span>
     </div>
     <div class="film">
       ${[0,1,2].map(i=>{const id=p.num+["a","b","c"][i];return `
         <div class="fr">
           <img src="storyboard/${id}.png" alt="${p.n}">
-          ${i===p.fx?`<span class="fx">${p.fxlab}</span>`:""}
-          <span class="cap">${p.caps[i]}</span>
+          ${i===p.fx?`<span class="fx" data-de="${p.fxlab.de}">${p.fxlab.en}</span>`:""}
+          <span class="cap" data-de="${p.caps.de[i]}">${p.caps.en[i]}</span>
         </div>`}).join("")}
     </div>
   </div>`).join("");
 document.getElementById("fxgrid").innerHTML=FX.map(f=>`
-  <div class="fxc"><div class="im"><video src="${f.vid}" muted autoplay loop playsinline poster="storyboard/${f.id}.png"></video><span class="lab">${f.lab}</span></div><p>${f.why}</p></div>`).join("");
+  <div class="fxc"><div class="im"><video src="${f.vid}" muted autoplay loop playsinline poster="storyboard/${f.id}.png"></video><span class="lab" ${d2(f.lab)}>${f.lab.en}</span></div><p ${d2(f.why)}>${f.why.en}</p></div>`).join("");
+if(window.setLang)setLang(window.LANG||'en');
 const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target);}}),{threshold:.12});
 document.querySelectorAll(".reveal").forEach(el=>io.observe(el));
 </script>
